@@ -1,8 +1,9 @@
 from kedro.pipeline import Pipeline, node
+
 from .nodes import preprocess_companies, preprocess_shuttles
 
 
-def create_pipeline():
+def create_pipeline(**kwargs):
     return Pipeline(
         [
             node(
@@ -16,6 +17,6 @@ def create_pipeline():
                 inputs="shuttles",
                 outputs="preprocessed_shuttles",
                 name="preprocess_shuttles_node",
-            )
+            ),
         ]
     )
