@@ -2,7 +2,7 @@ from typing import Dict
 
 from kedro.pipeline import Pipeline
 
-from .pipelines import data_processing as dp
+from python_package.pipelines import data_processing as dp
 
 
 def register_pipelines() -> Dict[str, Pipeline]:
